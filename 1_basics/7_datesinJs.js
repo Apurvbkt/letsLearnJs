@@ -29,3 +29,4 @@ newDate.toLocaleString('default', {
     weekday: "long",
     
 })
+console.log("first part done")
