@@ -7,7 +7,9 @@ let myArr = [1,2,3,4,5,6,7]
 // myArr.pop()
 // myArr.pop()
 // myArr.unshift(9)
-myArr.shift()
+// myArr.shift()
+let newArr =  myArr.join()
 
 console.log(myArr);
+console.log( newArr);
 
