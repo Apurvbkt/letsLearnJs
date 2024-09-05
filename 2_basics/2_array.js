@@ -1,12 +1,18 @@
-let marval = ["ironMan", "spiderMan", "Thor"];
+let marvel = ["ironMan", "spiderMan", "Thor"];
 let dc = ["Batman", "Superman", "Flash"];
 
-// marval.push(dc);
-// console.log(marval);
-// console.log(marval[3][2]);
+// marvel.push(dc);
+// console.log(marvel);
+// console.log(marvel[3][2]);
 
-let allHeros = marval.concat(dc)
-console.log(allHeros);
+// let allHeros = marvel.concat(dc)
+// console.log(allHeros);
+
+// console.log(...marvel, ...dc);
+
+let allNewHeros = [...marvel, ...dc]
+console.log(allNewHeros);
+
 
 
 
