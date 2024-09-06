@@ -13,12 +13,27 @@ let userJs = {
 }
 
 userJs.email = "gpt@gmail.com"
+userJs.greetings = function(){
+    console.log('hello world');    
+}
+userJs.greetingstwo = function(){
+    console.log(this.name);
+    
+}
+// Object.freeze(userJs)
 
-console.log(userJs.name);
-console.log(userJs["name"]);
+
+// console.log(userJs.name);
+// console.log(userJs["name"]);
 // console.log(userJs[mysym]);
-console.log(userJs["full name"]);
-console.log(userJs.email);
+// console.log(userJs["full name"]);
+// console.log(userJs.email);
+// console.log(userJs);
+
+console.log(userJs.greetings());
+console.log(userJs.greetingstwo());
+
+
 
 
 
