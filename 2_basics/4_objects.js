@@ -23,5 +23,33 @@ let obj2 = {3: 'c', 4 : 'd'}
 let obj = {5:'e',6:'f'}
 // let obj3 = Object.assign({},obj1, obj2, obj)
 let obj3 = {...obj1, ...obj2, ...obj}
-console.log(obj3);
+// console.log(obj3);
+
+let user = [
+    {
+        name : 'apurv',
+        gamil : 'apurv@gmail.com'
+    },
+    {
+        name : 'ram',
+        gamil : 'Ram@gmail.com'
+    },
+    {
+        name : 'Radha',
+        gamil : 'radha@gmail.com'
+    },
+    {
+        name : 'hanu',
+        gamil : 'hanu@gmail.com'
+    }
+]
+
+
+// console.log(user[2].name);
+// console.log(user[2].gamil);
+
+console.log(Object.keys(tinderUser));
+console.log(Object.values(tinderUser));
+
+
 
