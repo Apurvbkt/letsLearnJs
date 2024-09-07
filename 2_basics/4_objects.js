@@ -15,4 +15,13 @@ let regularUser = {
         }
     }
 }
-console.log(regularUser.fullname.userName);
+// console.log(regularUser.fullname.userName);
+
+
+let obj1 = {1: 'a', 2:'b'}
+let obj2 = {3: 'c', 4 : 'd'}
+let obj = {5:'e',6:'f'}
+// let obj3 = Object.assign({},obj1, obj2, obj)
+let obj3 = {...obj1, ...obj2, ...obj}
+console.log(obj3);
+
