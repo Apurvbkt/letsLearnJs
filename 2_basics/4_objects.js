@@ -6,3 +6,13 @@ tinderUser.loggedin = false
 
 // console.log(tinderUser);
 
+let regularUser = {
+    email : 'rug@gmail.com',
+    fullname : {
+        userName :{
+            firstname: "Apurv",
+            lastname : "Bhakat"
+        }
+    }
+}
+console.log(regularUser.fullname.userName);
