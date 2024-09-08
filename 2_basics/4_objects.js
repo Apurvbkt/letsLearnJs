@@ -66,3 +66,7 @@ const course = {
 // console.log(name);
 // console.log(rate);
 
+const {price : rate} = course;
+console.log(rate);
+
+
