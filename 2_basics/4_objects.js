@@ -59,8 +59,10 @@ const course = {
     price : 999
 }
 
-console.log(course.courseName);
+// console.log(course.courseName);
 
-const {courseName} = course;
-console.log(courseName);
+const {courseName : name} = course;
+const {price : rate} = course;
+console.log(name);
+console.log(rate);
 
