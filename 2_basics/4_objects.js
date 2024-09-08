@@ -61,8 +61,8 @@ const course = {
 
 // console.log(course.courseName);
 
-const {courseName : name} = course;
-const {price : rate} = course;
-console.log(name);
-console.log(rate);
+// const {courseName : name} = course;
+// const {price : rate} = course;
+// console.log(name);
+// console.log(rate);
 
