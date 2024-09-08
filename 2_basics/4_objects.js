@@ -53,3 +53,10 @@ console.log(Object.values(tinderUser));
 
 
 
+const course = {
+    courseName : 'jsInHindi',
+    instructor : 'Apurv',
+    price : 999
+}
+
+log
