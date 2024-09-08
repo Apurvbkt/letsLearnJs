@@ -48,8 +48,8 @@ let user = [
 // console.log(user[2].name);
 // console.log(user[2].gamil);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
 
 
 
@@ -59,4 +59,8 @@ const course = {
     price : 999
 }
 
-log
+console.log(course.courseName);
+
+const {courseName} = course;
+console.log(courseName);
+
