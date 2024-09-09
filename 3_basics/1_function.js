@@ -19,4 +19,8 @@ function twoNum(a, b) {
 let sum = twoNum(4,5)
 // console.log(sum);
 
+ function userInput(userName){
+  return `${userName} is loggedIn`
+ }
+ console.log(userInput("Kanishkk"));
  
