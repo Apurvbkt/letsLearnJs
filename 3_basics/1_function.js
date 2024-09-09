@@ -20,7 +20,11 @@ let sum = twoNum(4,5)
 // console.log(sum);
 
  function userInput(userName){
-  return `${userName} is loggedIn`
+  if(userName == undefined || userName == ""){
+    return 'Please enter user name'
+  }else{
+    return `${userName} is loggedIn`
+  }
  }
- console.log(userInput("Kanishkk"));
+ console.log(userInput('APurb'));
  
