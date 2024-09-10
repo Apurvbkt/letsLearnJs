@@ -31,6 +31,16 @@ let sum = twoNum(4,5)
 function cartItems( num2, num3, ...num1){
   return  num1
 }
-console.log(cartItems(100, 200, 300, 400, 500));
+// console.log(cartItems(100, 200, 300, 400, 500));
 
+
+let objData = {
+  username :  'Apurv',
+  price : 999
+}
+
+function userData(er){
+ return `user name is ${er.username} and price is ${er.price}`
+}
  
+console.log(userData(objData));
