@@ -26,5 +26,11 @@ let sum = twoNum(4,5)
     return `${userName} is loggedIn`
   }
  }
- console.log(userInput('APurb'));
+//  console.log(userInput('APurb'));
+
+function cartItems(num1, num2, num3){
+
+}
+console.log(cartItems(100, 200, 300));
+
  
