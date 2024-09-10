@@ -28,8 +28,8 @@ let sum = twoNum(4,5)
  }
 //  console.log(userInput('APurb'));
 
-function cartItems(num1, num2, num3){
-
+function cartItems(...num1){
+  return num1
 }
 console.log(cartItems(100, 200, 300));
 
