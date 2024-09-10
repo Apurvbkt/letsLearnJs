@@ -43,4 +43,12 @@ function userData(er){
  return `user name is ${er.username} and price is ${er.price}`
 }
  
-console.log(userData(objData));
+// console.log(userData(objData));
+
+
+let arr = [100, 200, 300, 400]
+
+function arrFun(apu){
+  return apu[3]
+}
+console.log(arrFun(arr));
