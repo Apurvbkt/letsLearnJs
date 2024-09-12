@@ -48,3 +48,16 @@ if(true){
     }
 
 }
+
+add(5);
+
+function add(sum){
+    return sum + 5
+}
+
+
+const Add = function(sum){
+    return sum + 5
+}
+
+Add(5)
