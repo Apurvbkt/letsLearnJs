@@ -4,10 +4,36 @@ if(true){
     let a = 1
     const b = 2
     var c = 3
-    console.log('inner scope ', a );
+    // console.log('inner scope ', a );
     
 }
 
-console.log(a);
+// console.log(a);
 // console.log(b);
-console.log(c);
+// console.log(c);
+
+
+//Scope 
+
+function parent (){
+    let mother = "Rashii"
+
+    function child(){
+        let baby  = "Ram"
+        console.log(mother);
+
+        function child2(){
+            let baby2 = "laxman"
+            console.log(baby);
+            
+        }
+        // console.log(baby2);
+        child2()
+        
+    }
+    // console.log(baby);
+
+    child()
+    
+}
+parent()
