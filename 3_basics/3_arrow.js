@@ -26,4 +26,11 @@ let chai = ()=>{
     console.log(this.userName);
     
 }
-chai()
+// chai()
+
+
+const addTwo = (num1, num2)=>{
+    return num1 + num2
+}
+
+console.log(addTwo(1,2));
