@@ -8,7 +8,7 @@
     
 })();
 
-((name)=>{
-    console.log(`my name is ${name} and I love Chai`);
+((name, cafe)=>{
+    console.log(`my name is ${name} and I love Chai of ${cafe}`);
     
-})('apurv')
+})('apurv', 'CCD')
