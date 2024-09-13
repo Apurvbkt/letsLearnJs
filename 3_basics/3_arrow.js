@@ -8,15 +8,22 @@ const obj = {
         
     }
 }
- obj.detail()
+//  obj.detail()
 
 //  console.log(this);
 
 
-function chai(){
+// function chai(){
+//     let userName = "Apurv"
+//     console.log(this.userName);
+    
+// }
+// chai()
+ 
+
+let chai = ()=>{
     let userName = "Apurv"
-    console.log(this);
+    console.log(this.userName);
     
 }
 chai()
- 
