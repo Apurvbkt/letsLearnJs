@@ -10,5 +10,13 @@ const obj = {
 }
  obj.detail()
 
- console.log(this);
+//  console.log(this);
+
+
+function chai(){
+    let userName = "Apurv"
+    console.log(this);
+    
+}
+chai()
  
