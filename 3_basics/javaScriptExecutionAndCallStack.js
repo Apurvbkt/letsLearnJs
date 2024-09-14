@@ -7,3 +7,5 @@
 // 1 global execution
 // 2 memory phase
 // 3 executaion phase
+
+// for function, new variable envirment + Execution context use to create to run function
