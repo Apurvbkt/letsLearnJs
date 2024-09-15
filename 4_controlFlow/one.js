@@ -20,7 +20,7 @@ const temperature = 41
 
 // console.log(`User power: ${power}`);
 
-/ const balance = 1000
+ const balance = 1000
 
 // if (balance > 500) console.log("test"),console.log("test2");
 
@@ -37,7 +37,7 @@ const temperature = 41
 
 // }
 
-onst userLoggedIn = true
+const userLoggedIn = true
 const debitCard = true
 const loggedInFromGoogle = false
 const loggedInFromEmail = true
