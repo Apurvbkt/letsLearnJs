@@ -36,3 +36,8 @@ const temperature = 41
 //     console.log("less than 1200");
 
 // }
+
+onst userLoggedIn = true
+const debitCard = true
+const loggedInFromGoogle = false
+const loggedInFromEmail = true
