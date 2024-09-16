@@ -20,7 +20,7 @@ if (userEmail) {
 const emptyObj = {}
 
 if (Object.keys(emptyObj).length === 0) {
-    console.log("Object is empty");
+    // console.log("Object is empty");
 }
 
 // Nullish Coalescing Operator (??): null undefined
@@ -33,11 +33,15 @@ val1 = null ?? 10 ?? 20
 
 
 
-console.log(val1);
+// console.log(val1);
 
 // Terniary Operator
 
 // condition ? true : false
 
 const iceTeaPrice = 100
-iceTeaPrice <= 80 ? console.log("less than 80") : console.log("more than 80")
+// iceTeaPrice <= 80 ? console.log("less than 80") : console.log("more than 80")
+
+const name = 'apurv'
+name === 'apurva' ? console.log(`name is ${name}`) : console.log(`name is not ${name}`);
+
