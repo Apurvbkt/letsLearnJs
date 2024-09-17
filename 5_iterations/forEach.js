@@ -23,6 +23,31 @@ const marvelHeroes = [
 ];
 
 marvelHeroes.forEach((el)=>{
-    console.log(el);
+    // console.log(el);
     
+})
+
+const myCoding = [
+    {
+        languageName: "javascript",
+        languageFileName: "js"
+    },
+    {
+        languageName: "java",
+        languageFileName: "java"
+    },
+    {
+        languageName: "python",
+        languageFileName: "py"
+    }
+]
+
+myCoding.forEach((el)=>{
+//     console.log(el.languageFileName);
+    
+// console.log(el.languageName);
+
+console.log(`${el.languageFileName} and ${el.languageName}`);
+
+
 })
