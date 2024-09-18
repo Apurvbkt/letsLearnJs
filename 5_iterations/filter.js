@@ -6,14 +6,14 @@ const lang = ['java', 'javascript', 'ruby', 'c++', 'c', 'python' ]
 
 
 
-// const myNum = [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+const myNum = [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
 
 // let res = myNum.filter((num)=> num >5)
 // console.log(res);
 
-// let res = myNum.filter((num)=> {
-//    return num>5
-// })
+let res = myNum.filter((num)=> {
+   return num >10
+})
 // console.log(res);
 
 
@@ -41,14 +41,14 @@ const books = [
     { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
   ];
 
-  let res = books.filter((bks)=> bks.genre === 'History')
+//   let res = books.filter((bks)=> bks.genre === 'History')
 //   console.log(res);
   let year = books.filter((el)=>el.genre ==="Fiction")
 //   console.log(year);
   let pub = books.filter((el)=> el.publish > 2000)
-console.log(pub);
+// console.log(pub);
 
 userBooks = books.filter( (bk) => { 
     return bk.publish >= 1995 && bk.genre === "History"
 })
-  console.log(userBooks);
+//   console.log(userBooks);
