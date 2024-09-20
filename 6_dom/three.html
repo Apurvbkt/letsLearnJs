@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chai aur code</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>
 <script>
-    // const div = document.createElement('div')
-    // div.className = 'test'
-    // div.id = 'myId'
-    // div.setAttribute('title', 'my name is test div')
-    // div.style.backgroundColor = 'black'
-    // div.style.color = 'white'
-    // div.innerText= 'I am a div'
-    // // div.appendChild(text)
-    // document.body.appendChild(div)
+  // const div = document.createElement('div')
+  // div.className = 'test'
+  // div.id = 'myId'
+  // div.setAttribute('title', 'my name is test div')
+  // div.style.backgroundColor = 'black'
+  // div.style.color = 'white'
+  // div.innerText= 'I am a div'
+  // // div.appendChild(text)
+  // document.body.appendChild(div)
+
+  function createNewDiv(txt, clr) {
+    const div = document.createElement("div");
+    div.innerText = txt;
+    div.style.backgroundColor = clr;
+    div.style.color = "red";
+    document.body.appendChild(div);
+    console.log(div);
+  }
+
+  const bgarr = ["blue", "black", "yellow", "green"];
+  const txt = ["oneDiv", "twoDiv", "ThreeDiv", "FourDiv"];
+
+  for(i = 0; i <bgarr.length; i++){
+      console.log(createNewDiv(txt[i],bgarr[i]));
+
+  }
+
+
+  // for (const bgclr of bgarr) {
+  //     console.log(createNewDiv('hii',bgclr));
+
+  // }
+
+//   bgarr.forEach((el)=>{
+//     console.log(createNewDiv(el));
     
-    function createNewDiv(txt, clr){
-        const div = document.createElement('div')
-        div.innerText = txt
-        div.style.backgroundColor = clr
-        div.style.color = 'red'
-        document.body.appendChild(div)
-        console.log(div);
-        
-    }
-    
-    const bgarr = ['blue', 'black', 'yellow', 'green']
-    const txt = ['oneDiv', 'twoDiv', 'ThreeDiv', 'FourDiv']
+//   })
 
-    for(i = 0; i <bgarr.length; i++){
-        console.log(createNewDiv(txt[i],bgarr[i]));
-        
-    }
-
-
+//   txt.forEach((el)=>{console.log(createNewDiv(el));
+//   })
 </script>
