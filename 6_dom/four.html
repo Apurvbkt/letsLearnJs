@@ -13,15 +13,28 @@
 </body>
 </html>
 <script>
-function litag(lang){
-   const li =  document.createElement('li')
-   li.innerHTML = `${lang}`
-   document.querySelector('.lang').appendChild(li)
-   console.log(li);
+// function litag(lang){
+//    const li =  document.createElement('li')
+//    li.innerHTML = `${lang}`
+//    document.querySelector('.lang').appendChild(li)
+//    console.log(li);
    
+// }
+
+// litag('py')
+// litag('hello')
+
+// 2nd way with optimize way
+
+
+function opttag(lang){
+    const li = document.createElement('li')
+    const text = document.createTextNode(lang)
+    li.appendChild(text)
+    document.querySelector(".lang").appendChild(li)
+     
+    // console.log(li);    
 }
-
-litag('py')
-litag('hello')
-
+opttag('java')
+opttag('typeScript')
 </script>
