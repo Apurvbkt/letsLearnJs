@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code</title>
+</head>
+<body>
+    <h1>practice</h1>
+    <ul class="lang">
+        <li>JavaScript</li>
+    </ul>
+</body>
+</html>
+<script>
+function litag(lang){
+   const li =  document.createElement('li')
+   li.innerHTML = `${lang}`
+   document.querySelector('.lang').appendChild(li)
+   console.log(li);
+   
+}
+
+litag('py')
+litag('hello')
+
+</script>
