@@ -1,6 +1,7 @@
 
 
-#project 3
+## project 3
+``` javascript
 let clock = document.getElementById('clock')
 // console.log(clock)
 
@@ -11,3 +12,5 @@ setInterval(()=>{
   clock.innerHTML = date.toLocaleTimeString()
   
 },1000)
+
+```
