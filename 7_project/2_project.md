@@ -30,5 +30,20 @@ form.addEventListener('submit', (l)=>{
     res.innerHTML = `<span>${bmi}</span>`
   }
 
+//Assignment Updated
+
+if(formula < 18.6){
+    // console.log('Under Weight')
+    weightInfo.innerHTML = 'Under Weight'
+  }
+  // 18.6 24.9
+  else if(formula <= 18.6 || formula <=24.6){
+    // console.log('normal weight')
+    weightInfo.innerHTML = 'normal Weight'
+  }else {
+    // console.log('over Weight')
+    weightInfo.innerHTML = `<h3>Over Weight</h3>`
+  }
+
 })
 ```
