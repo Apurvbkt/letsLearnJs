@@ -24,10 +24,25 @@
     // document.querySelector("#owl").onclick = function(){
     //     alert('this is owl')
     // }
-    document.querySelector("#owl").addEventListener('click', (en)=>{
-        // alert('owl clicked')
-        console.log(en);
+    // document.querySelector("#owl").addEventListener('click', (en)=>{
+    //     // alert('owl clicked')
+    //     console.log(en);
         
-    }, false)
+    // }, false)
+    
+        document.getElementById("images").addEventListener('click', ()=>{
+            // alert("img uL clicked")
+        })
+
+    document.getElementById('owl').addEventListener('click', (e)=>{
+        alert("owl clicked")
+        e.stopPropagation()
+    },false)
+
+    document.getElementById("google").addEventListener('click', (e)=>{
+        console.log('google clicked');
+        e.preventDefault()
+        
+    })
 
 </script>
