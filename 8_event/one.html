@@ -46,6 +46,28 @@
         
     // })
 
-    
+    document.getElementById("images").addEventListener('click', (e)=>{
+            // console.log(e.target.parentNode());
+            let node = e.target.tagName 
+            if(node === "IMG"){
+                e.target.parentNode.remove()
+            }else{
+                alert("it is not parentNode, it a li tag")
+            }
+            
+            e.stopPropagation()
+            
+    })
+
+    // document.getElementById("owl").addEventListener('click', (e)=>{
+    //         console.log(e.target.parentNode);
+    //         let rv = e.target.parentNode
+    //         rv.remove()
+    //         console.log(rv.parentNode.removeChild(rv));
+            
+    // })
+     
+
+
 
 </script>
