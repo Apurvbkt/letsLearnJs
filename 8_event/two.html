@@ -6,6 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    hii
+    <h1 >Chai aur Code</h1>
+    <button id="stop">stop</button>
 </body>
 </html>
+<script>
+    // function func(){}
+    let func = function(){
+        console.log('hello')
+    }
+    
+    let name  = function(){
+        document.querySelector("h1").innerHTML = "best javascript course"
+    }
+      
+    setTimeout( func, 5000)
+    let nameChange = setTimeout(name, 3000)
+    
+    document.getElementById("stop").addEventListener("click", ()=>{
+        clearTimeout(nameChange)
+        console.log('stoppp');
+        
+    })
+    
+    
+</script>
