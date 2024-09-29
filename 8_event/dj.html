@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="dj1">lets party</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    
+</body>
+</html>
+<script>
+    // Math.floor(Math.random() * 16 )
+    function randomNum (){
+        let hex = '0123456789abcdef'
+        let color = '#'
+        
+        for(i = 0; i < 6; i++){
+            color += hex[ Math.floor(Math.random() * 16 )]
+            console.log(color);
+            
+        }
+        console.log(color);
+        return color;
+        
+        
+    }
+    // randomNum()
+    
+    let colorControl
+    let start = function(){
+        
+        const colorDis = function() {document.body.style.backgroundColor = randomNum()}
+        colorControl= setInterval(colorDis, 1000)
+    }
+    
+    let stop = function(){
+        clearInterval(colorControl)
+        console.log('stop');
+        color = ''
+        
+        
+    }
+    
+    
+    
+    
+    document.getElementById('start').addEventListener('click',  start)
+    document.getElementById('stop').addEventListener('click',  stop)
+
+    
+        // let colorDis = document.body.style.backgroundColor = randomNum()
+    
+    
+</script>
