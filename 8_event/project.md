@@ -17,6 +17,7 @@ function randomColor(){
 }
 // console.log(randomColor())
 let colorTime;
+
 let start = function(){
   let colorFunc= function(){ document.body.style.backgroundColor = randomColor()}
    colorTime = setInterval(colorFunc, 100)
