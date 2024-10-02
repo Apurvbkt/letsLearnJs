@@ -4,11 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(64, 54, 54);
+        }
+    </style>
   </head>
-  <body></body>
-</html>
-
-<script>
+  <body >
+<h1 style="color: white;">Api fetch with XMLHttpRequest</h1>
     
+  </body>
+</html>
+<script>
+    let url = 'https://api.github.com/users/Apurvbkt'
    const xhr = new XMLHttpRequest()
+   xhr.open('GET', url)
+   
+   console.log(xhr.readyState);
+   xhr.send()
+//    console.log(xhr.send());
+   
 </script>
