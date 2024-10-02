@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .main{
+            /* background-color: black; */
+            /* width: 100%;
+            height: 100vh; */
+            /* display: grid;
+            justify-content: center;
+            align-items: center; */
+        }
+        .imgDiv{
+            /* background-color: red; */
+            width: 200px;
+            height: 300px;
+            /* margin: 0%;
+            padding: 0; */
+        }
+        .btn{
+            background-color: bisque;
+            height: 30px;
+            border-radius: 10px;
+            /* margin-bottom: 300px; */
+        }
+        img{
+            height: 350px;
+            width: 300px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="imgDiv"></div>
+        
+    </div>
+    <button id="btn">press to see </button>
+</body>
+</html>
+
+<script>
+    let btn = document.getElementById('btn').addEventListener('click', ()=>{
+        
+        
+        let url = 'https://api.github.com/users/Apurvbkt'
+        const xhr = new XMLHttpRequest()
+        xhr.open('GET', url)
+        xhr.onreadystatechange = function(){
+            
+            if(xhr.readyState === 4){
+                
+                const data = JSON.parse(this.responseText)
+                let flow = data.followers;
+                const img = data.avatar_url
+                // console.log(folw , img)
+                
+                let dataSave = document.querySelector('.imgDiv').innerHTML =`
+                <img src=${img} alt="">
+                
+                <h1 style: >followes =  ${flow}</h1> `
+                
+                
+                
+                
+            }
+        }
+        
+        xhr.send()
+        
+        
+    })
+</script>
