@@ -7,3 +7,7 @@ const promiseData = new Promise(function(resolve, reject){
     
 })
 
+promiseData.then(()=>{
+    console.log("Promise accepted");
+    
+})
