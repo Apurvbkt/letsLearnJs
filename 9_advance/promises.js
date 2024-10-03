@@ -11,3 +11,5 @@ promiseData.then(()=>{
     console.log("Promise accepted");
     
 })
+
+//baaki baateyn
