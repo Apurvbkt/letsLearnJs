@@ -41,4 +41,13 @@ new Promise((resolve, reject)=>{
     
 // })
 
+let func 
+const promiseTest = new Promise((resolve, reject) => {
+    setTimeout(function(){
+        resolve({name:'bkt', gmail:'a@a'})
+    },1000)
+}).then((data)=>{
+    console.log(data);
+    
+})
 
