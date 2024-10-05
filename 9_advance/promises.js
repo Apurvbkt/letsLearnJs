@@ -32,7 +32,7 @@ new Promise((resolve, reject)=>{
     },3000)
     
 }).then((user)=>{
-    console.log(user);
+    // console.log(user);
     
 })
 
@@ -47,14 +47,14 @@ const promiseTest = new Promise((resolve, reject) => {
         resolve({name:'bkt', gmail:'a@a'})
     },1000)
 }).then((data)=>{
-    console.log(data);
+    // console.log(data);
     
 })
 
 
 const promiseFour =new Promise(function(resolve, reject){
     setTimeout(()=>{
-        let err = true;
+        let err = false;
         if(!err){
             resolve({usernam : 'apurv', pass: 123})
         }
@@ -64,7 +64,13 @@ const promiseFour =new Promise(function(resolve, reject){
 
 
 promiseFour.then((user)=>{
-    console.log(user);
+    // console.log(user);
     return user.usernam
+    
+}).then((name)=>{
+    console.log(name);
+    
+}).catch((e)=>{
+    console.log(e);
     
 })
