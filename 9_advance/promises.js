@@ -51,3 +51,20 @@ const promiseTest = new Promise((resolve, reject) => {
     
 })
 
+
+const promiseFour =new Promise(function(resolve, reject){
+    setTimeout(()=>{
+        let err = true;
+        if(!err){
+            resolve({usernam : 'apurv', pass: 123})
+        }
+        else{reject('ERROR kuch to gadbar hai daya')}
+    },1000)
+})
+
+
+promiseFour.then((user)=>{
+    console.log(user);
+    return user.usernam
+    
+})
