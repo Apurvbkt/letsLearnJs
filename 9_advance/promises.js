@@ -81,29 +81,54 @@
 
 
 
-const promiseFive = new Promise((resolve, reject)=>{
-    setTimeout(()=>{
-        let err = true;
-        if(!err){
-            resolve({name:'apurv', pass: 1223})
-        }else{
-            reject('ERROR: js me dikkt')
-        }
-    },1000)
-})
+// const promiseFive = new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//         let err = true;
+//         if(!err){
+//             resolve({name:'apurv', pass: 1223})
+//         }else{
+//             reject('ERROR: js me dikkt')
+//         }
+//     },1000)
+// })
 
 
-async function promiseCheck(){
+// async function promiseCheck(){
     
+//     try {
+//         const res = await promiseFive
+//         console.log(res);
+        
+//     } catch (error) {
+        
+//         console.log(error);
+        
+//     }
+    
+// }
+// promiseCheck()
+
+
+
+
+// realFetch
+
+async function realData() {
     try {
-        const res = await promiseFive
-        console.log(res);
+        const res = await fetch('https://jsonplaceholder.typicode.com/users')
+        // console.log(res);
+        
+        const data = await res.json()
+        console.log(data);
+        
+            // console.log(data.name);
         
     } catch (error) {
-        
         console.log(error);
         
     }
     
+        
 }
-promiseCheck()
+
+realData()
