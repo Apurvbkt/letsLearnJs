@@ -119,7 +119,13 @@ async function realData() {
         // console.log(res);
         
         const data = await res.json()
-        console.log(data);
+        // console.log(data);
+        
+        data.map((e)=>{
+           let name = e.name
+           console.log(name);
+           
+        })
         
             // console.log(data.name);
         
@@ -132,3 +138,19 @@ async function realData() {
 }
 
 realData()
+
+
+
+
+
+// then, catch
+
+// fetch('https://jsonplaceholder.typicode.com/users')
+
+// .then((res)=>{
+//     return res.json()
+// }).then((x)=>{
+//     console.log(x);
+    
+// })
+// .catch((err)=> console.log(err))
