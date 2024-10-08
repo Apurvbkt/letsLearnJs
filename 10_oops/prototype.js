@@ -18,4 +18,15 @@ let heroPower = {
     }
 }
 
-heroPower.apurv()
+Object.prototype.apurv  = function(){
+    console.log('aprv is present in all object');
+    
+}
+
+Array.prototype.apurv2  = function(){
+    console.log('apurv2 is present in arr');
+    
+}
+
+// heroPower.apurv2()
+hero.apurv2()
