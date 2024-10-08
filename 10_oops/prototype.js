@@ -11,5 +11,11 @@ let hero = ['thor', 'spiderman']
 
 let heroPower = {
     thor : 'hammer',
-    spiderman : 'web'
+    spiderman : 'web',
+    
+    getSpiderP : function(){
+        console.log('this is spider Power: ' + this.spiderman)
+    }
 }
+
+heroPower.apurv()
