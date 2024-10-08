@@ -14,19 +14,30 @@ let heroPower = {
     spiderman : 'web',
     
     getSpiderP : function(){
-        console.log('this is spider Power: ' + this.spiderman)
+        // console.log('this is spider Power: ' + this.spiderman)
     }
 }
 
 Object.prototype.apurv  = function(){
-    console.log('aprv is present in all object');
+    // console.log('aprv is present in all object');
     
 }
 
 Array.prototype.apurv2  = function(){
-    console.log('apurv2 is present in arr');
+    // console.log('apurv2 is present in arr');
     
 }
 
 // heroPower.apurv2()
-hero.apurv2()
+// hero.apurv2()
+
+
+String.prototype.trueLength = function(){
+    // console.log(this);
+    console.log(`True length is =  ${this.trim().length}`);
+    
+    
+}
+'chai'.trueLength()
+' Apurv '.trueLength()
+
