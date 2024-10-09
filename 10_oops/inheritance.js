@@ -27,3 +27,11 @@ class Teacher extends User{
 
 const chai = new Teacher("javascript", 'chai#gmail.com', '123')
 chai.addCourse()
+
+const masalaChai = new User('masalaChai')
+masalaChai.logme()
+
+
+console.log(chai instanceof Teacher);
+console.log(masalaChai instanceof User);
+
