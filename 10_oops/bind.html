@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <button>Button CLicked</button>
-</body>
+  </body>
 </html>
 <script>
-    class react {
-        constructor(){
-            this.librery = 'React'
-            this.server = 'https://localhost:300'
-            document.getElementsByTagName("button").addEventListner('click', this.handleClick.bind(this))
-        }
-        
-        handleClick(){
-            console.log();
-            
-        }
-        
-    }
+  class react {
+      constructor(){
+          this.librery = 'React'
+          this.server = 'https://localhost:300'
+          document.getElementsByTagName("button").addEventListner('click', this.handleClick.bind(this))
+      }
+
+      handleClick(){
+          console.log('button clicked');
+          console.log(this.server);
+
+      }
+
+  }
+
+  const app = new React()
 </script>
