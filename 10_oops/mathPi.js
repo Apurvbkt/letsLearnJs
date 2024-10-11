@@ -7,8 +7,7 @@ const chai = {
     name : 'masala chai',
     flavour : 'hearbs',
     isAvalible : true,
-    writable: false,
-    enumerable: false
+    
     
 }
 
@@ -18,6 +17,6 @@ Object.defineProperty(chai, 'name', {
     enumerable: false
 })
 
-console.log(chai)
 console.log(Object.getOwnPropertyDescriptor(chai, 'name'));
 
+// console.log(chai.name)
