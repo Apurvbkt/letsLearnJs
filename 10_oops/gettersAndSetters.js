@@ -8,5 +8,15 @@ class users{
         return this.email.toUpperCase()
     }
     
+    set email(){
+        return this.email.toUpperCase()
+    }
+    
+    get password(){
+        return this.email.toUpperCase()
+    }
+    set password(){
+        return this.password.toUpperCase()
+    }
 }
 
