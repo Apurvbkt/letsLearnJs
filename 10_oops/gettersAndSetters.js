@@ -20,5 +20,7 @@ class users{
     }
 }
 
-cosnt apurv = 
+const apurv = new users('apurv.bkt@gmail.com', 'hell')
+console.log(apurv.email);
+
 
