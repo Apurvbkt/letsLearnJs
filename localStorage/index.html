@@ -7,14 +7,17 @@
 </head>
 <body>
     
+    <h1 id="hi"></h1>
     
-    <h1>aaj tabyat thik ni hai </h1>
-    <h1>to mai kal se pdhunga</h1>
-    <h1>sir dukh rha hai</h1>
-    aaj bhi rest krra hun, kal se krunga, jaise he thoda thik ho jayunga, avi rest krta hun, bye
 </body>
 </html>
 
 <script>
     localStorage.setItem('name', 'apurv')
+    localStorage.setItem('roll', 1)
+    
+    let name = localStorage.getItem('name')
+    let h1 = document.getElementById('hi').innerText = name
+    // console.log(h1);
+    // // h1.innerHTML = name
 </script>
