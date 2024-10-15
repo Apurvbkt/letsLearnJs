@@ -5,18 +5,20 @@ class users{
     }
     
     get email(){
-        return this.email.toUpperCase()
+        return this._email.toUpperCase()
     }
     
-    set email(){
-        return this.email.toUpperCase()
+    set email(value){
+         this._email = value
     }
     
     get password(){
-        return this.email.toUpperCase()
+        return `${this._password}Apurv`
     }
-    set password(){
-        return this.password.toUpperCase()
+    set password(value){
+         this._password = value
     }
 }
+
+cosnt apurv = 
 
