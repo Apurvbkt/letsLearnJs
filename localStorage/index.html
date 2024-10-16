@@ -29,7 +29,19 @@
     localStorage.setItem("numArr", JSON.stringify(myarr))
     let res = localStorage.getItem('numArr')
     res = JSON.parse(res)
-    console.log( res);
+    // console.log( res);
+    
+    let obj = {
+        name : 'apurv',
+        class: 10
+    }
+    
+    localStorage.setItem('myObj', JSON.stringify(obj))
+    
+    let jj = JSON.parse(localStorage.getItem('myObj'))
+    
+    console.log( jj);
+    
     
     
     
