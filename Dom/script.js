@@ -45,7 +45,7 @@ function scoreCount(){
 }
 
 document.getElementById('panelbtm').addEventListener('click', (e)=>{
-    console.log(e.target);
+    console.log(Number(e.target.innerText));
     
 })
 
