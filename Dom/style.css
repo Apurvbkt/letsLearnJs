@@ -56,5 +56,28 @@ html, body{
 #panelbtm{
     width: 100%;
     height: calc(100% - 10%);
-    /* background-color: aqua; */
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    /* justify-content: space-between; */
+    
+    background-color: aqua;
+}
+.bubble{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(119, 163, 119);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* text-align: center; */
+    
+    
+}
+.bubble:hover{
+    background-color: rgb(88, 110, 88);
+    cursor: pointer;
 }
