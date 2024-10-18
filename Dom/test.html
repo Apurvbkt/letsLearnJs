@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services</title>
+    <!-- Link to Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .agdasima-regular {
+        font-family: "Agdasima", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+
+
+      /* Custom styles for the diagonal split */
+      .diagonal-split {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      .blue-half {
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+      }
+
+      .gray-half {
+        clip-path: polygon(0 100%, 100% 0, 100% 100%);
+      }
+
+      
+      #box1{
+          -webkit-transition: width 2s,-webkit-transform 1s;
+          
+      }
+      #box1:hover{
+           -webkit-transform:rotate(360deg);
+        }
+        
+    </style>
+  </head>
+
+  <body class="flex justify-center items-center min-h-screen bg-gray-100">
+    <!-- Container for the assignment -->
+    <div id="assignment" class="relative w-9/12 h-[430px]">
+      <!-- Blue and gray diagonal split div -->
+      <div class="relative w-full h-full diagonal-split">
+        <!-- Blue half -->
+        <div
+          class="absolute inset-0 blue-half"
+          style="background-color: rgb(42, 23, 104);"
+        ></div>
+        <!-- Gray half -->
+        <div
+          class="absolute inset-0 gray-half"
+          style="background-color: rgb(236, 238, 246);"
+        ></div>
+
+        <!-- Our Services Section -->
+        <div class="relative text-center">
+            <h1
+            class="text-5xl font-semibold text-white text-left ml-16 agdasima-regular pt-8 pb-4"
+          >
+            Our Services
+          </h1>
+
+          <!-- Services Grid -->
+          <div class="ml-16 mr-6 mt-8 grid grid-cols-1 md:grid-cols-4 gap-2">
+            <!-- Service 1 -->
+            <div 
+              class="relative bg-white p-4 h-64 w-60 mt-8 mb-4 shadow-md hover:shadow-lg "
+            >
+              <!-- Circle container for image or icon -->
+              <div
+                id="box1"
+                class="absolute   -top-12 w-20 h-20 border-4 border-purple-950 rounded-full shadow-lg flex justify-center items-center ml-16 "
+              >
+                <img
+                  src="./assects/Picsart_24-10-17_15-12-48-111.png"
+                  alt="Service 1 Image"
+                  class="w-12 h-12"
+                />
+              </div>
+              <h2 class="text-xl font-semibold mt-4 mb-2">
+                Emergency Plumbing Services
+              </h2>
+              <p class="text-gray-600 mb-4 leading-4 ">
+                Our plumbers are ready to go 24/7 for emergencies - including
+                nights, weekends, and holidays.
+              </p>
+              <button class="text-purple-950 font-semibold">
+                EXPLORE THIS SERVICE
+              </button>
+              <i class="fa-solid fa-angle-right text-purple-950"></i>
+            </div>
+
+            <!-- Service 2 -->
+            <div
+              class="relative bg-white p-4 h-64 w-60 mt-8 mb-4 shadow-md hover:shadow-lg "
+            >
+              <div id="box1"
+                class="absolute -top-12 ml-16 w-20 h-20 border-4 border-purple-950 rounded-full shadow-lg flex items-center justify-center "
+              >
+                <img
+                  src="./assects/Picsart_24-10-17_15-15-33-996.png"
+                  alt="Service 2 Image"
+                  class="w-fit h-fit"
+                />
+              </div>
+              <h2 class="text-xl font-semibold mt-4 mb-2">
+                Plumbing and Drains
+              </h2>
+              <p class="text-gray-600 mb-4 leading-4 ">
+                As the largest plumbing and drain service company, we make
+                thousands of repairs every day.
+              </p>
+              <button class="text-purple-950 font-semibold">
+                EXPLORE THIS SERVICE
+              </button>
+              <i class="fa-solid fa-angle-right text-purple-950"></i>
+            </div>
+
+            <!-- Service 3 -->
+            <div
+              class="relative bg-white p-4 h-64 w-60 mt-8 mb-4 shadow-md hover:shadow-lg transition duration-300 rotate"
+            >
+              <div id="box1"
+                class="absolute -top-12 ml-16 w-20 h-20 border-4 border-purple-950 rounded-full shadow-lg flex items-center justify-center"
+              >
+                <img
+                  src="./assects/Picsart_24-10-17_15-13-48-908.png"
+                  alt="Service 3 Image"
+                  class="w-fit h-fit"
+                />
+              </div>
+              <h2 class="text-xl font-semibold mt-4 mb-2">Water Damage</h2>
+              <p class="text-gray-600 mb-4 leading-4  ">
+                Our teams are equipped with state-of-the-art water extraction
+                and cleanup equipment.
+              </p>
+              <button class="text-purple-950 font-semibold">
+                EXPLORE THIS SERVICE
+              </button>
+              <i class="fa-solid fa-angle-right text-purple-950"></i>
+            </div>
+
+            <!-- Service 4 -->
+            <div
+              class="relative bg-white p-4 h-64 w-60 mt-8 mb-4 shadow-md hover:shadow-lg transition duration-300 rotate"
+            >
+              <div id="box1"
+                class="absolute -top-12 ml-16 w-20 h-20 border-4 border-purple-950 rounded-full shadow-lg flex items-center justify-center"
+              >
+                <img
+                  src="./assects/Picsart_24-10-17_15-14-49-582.png"
+                  alt="Service 4 Image"
+                  class="w-fit h-fit"
+                />
+              </div>
+              <h2 class="text-xl font-semibold mt-4 mb-2">Water Heaters</h2>
+              <p class="text-gray-600 mb-4 leading-4 ">
+                Trust Roto-Rooter for repair and replacement of gas, electric,
+                and tankless water heaters.
+              </p>
+              <button class="text-purple-950 font-semibold">
+                EXPLORE THIS SERVICE
+              </button>
+              <i class="fa-solid fa-angle-right text-purple-950"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
