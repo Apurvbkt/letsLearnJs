@@ -1,10 +1,55 @@
- var res = "";
+count = 60;
+score = 0;
 
-for(var i = 0; i <=181; i++){
-   let num = Math.floor(Math.random() * 10)
-    res = res + `<div class="bubble">${num}</div>`
+
+function makeBubble(){
+
+let bubble = "";
+for (let i = 0;  i<=181; i++){
+    let num = Math.floor(Math.random() * 10)
+    bubble +=`<div class="bubble">${num}</div>`
+//    console.log(num);
+    
 }
-// console.log(res);
+
+document.getElementById("panelbtm").innerHTML = bubble
+
+}
+
+function timer(){
+    let time = setInterval(()=>{
+        // console.log(count--);
+        if(count  > 0){
+            // console.log(count--);
+            count--
+            document.getElementById('time').innerText = count
+        }else{
+            clearInterval(time)
+            console.log('game over');
+            document.getElementById('panelbtm').innerText = "Game Over"
+            
+        }
+        
+        
+    },1000)
+}
+
+function hit(){
+    let num = Math.floor(Math.random() * 10)
+    document.getElementById("hit").textContent = num
+}
+
+function scoreCount(){
+    score += 10
+    document.getElementById('score').innerText = score
+}
+
+document.getElementById('panelbtm').addEventListener('click', (e)=>{
+    console.log(e.target);
+    
+})
 
 
-document.querySelector('#panelbtm').innerHTML = res
+hit()
+timer()
+makeBubble()

@@ -62,7 +62,7 @@ html, body{
     gap: 5px;
     /* justify-content: space-between; */
     
-    background-color: aqua;
+    background-color: rgb(235, 231, 197);
 }
 .bubble{
     height: 40px;
