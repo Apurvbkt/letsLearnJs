@@ -1,6 +1,6 @@
-count = 60;
+count = 10;
 score = 0;
-
+hitnum = 0;
 
 function makeBubble(){
 
@@ -26,7 +26,9 @@ function timer(){
         }else{
             clearInterval(time)
             console.log('game over');
-            document.getElementById('panelbtm').innerText = "Game Over"
+            document.getElementById('panelbtm').innerHTML = `<h1>Game over!!  <br>
+            your total score is = ${score} </h1>`
+            
             
         }
         
@@ -35,8 +37,8 @@ function timer(){
 }
 
 function hit(){
-    let num = Math.floor(Math.random() * 10)
-    document.getElementById("hit").textContent = num
+     hitnum = Math.floor(Math.random() * 10)
+    document.getElementById("hit").textContent = hitnum;
 }
 
 function scoreCount(){
@@ -45,10 +47,19 @@ function scoreCount(){
 }
 
 document.getElementById('panelbtm').addEventListener('click', (e)=>{
-    console.log(Number(e.target.innerText));
+    let res = Number(e.target.innerText)
+    
+    if(res === hitnum){
+        // alert('same')
+        scoreCount()
+        makeBubble()
+        hit()
+    }
+    else{
+        alert('Please click properly')
+    }
     
 })
-
 
 hit()
 timer()

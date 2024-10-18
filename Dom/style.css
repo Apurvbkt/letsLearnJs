@@ -58,6 +58,8 @@ html, body{
     height: calc(100% - 10%);
     padding: 10px;
     display: flex;
+    text-align: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 5px;
     /* justify-content: space-between; */
