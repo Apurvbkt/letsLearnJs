@@ -6,9 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Stranger</h1>
+    <h1 class="text">Stranger</h1>
     <button id="add">add</button>
     <button id="remove">remove</button>
 </body>
 </html>
-<script></script>
+<script>
+    
+    document.getElementById('add').addEventListener('click', ()=>{
+       let press = document.querySelector('.text').innerHTML = 'Friend'
+        console.log(press);
+        
+    })
+    document.getElementById('remove').addEventListener('click', ()=>{
+       let press = document.querySelector('.text').innerHTML = 'Stranger'
+        console.log('remove');
+        
+    })
+    
+</script>
