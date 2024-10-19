@@ -8,20 +8,30 @@
 <body>
     <h1 class="text">Stranger</h1>
     <button id="add">add</button>
-    <button id="remove">remove</button>
+    <!-- <button id="remove">remove</button> -->
 </body>
 </html>
 <script>
-    
-    document.getElementById('add').addEventListener('click', ()=>{
-       let press = document.querySelector('.text').innerHTML = 'Friend'
-        console.log(press);
+    var flag = 0;
+     var btn = document.getElementById('add').addEventListener('click', ()=>{
+      
+        if(flag == 0){
+            document.querySelector('.text').innerText = 'Friend';
+            flag = 1;
+            document.getElementById('add').innerHTML = 'Remove'
+        }
+        else{
+            document.querySelector('.text').innerText = 'Stranger';
+            flag = 0;
+            document.getElementById('add').innerHTML = 'Add'
+            
+        }
         
     })
-    document.getElementById('remove').addEventListener('click', ()=>{
-       let press = document.querySelector('.text').innerHTML = 'Stranger'
-        console.log('remove');
+    // document.getElementById('remove').addEventListener('click', ()=>{
+    //    let press = document.querySelector('.text').innerHTML = 'Stranger'
+    //     console.log('remove');
         
-    })
+    // })
     
 </script>
