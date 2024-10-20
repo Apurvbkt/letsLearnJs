@@ -5,70 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0%;
-        }
-        body, html{
-            height: 100%;
-            width: 100%;
-        }
-        
-        #nav{
-            background-color: rosybrown;
-            display: flex;
-            justify-content: space-between;
-        }
-        #navL{
-            /* border: 1px solid red; */
-            width: 130px;
-        }
-        img{
-            width: 80%;
-            height: 100%;
-        }
-        #navR{
-            /* border: 1px solid red; */
-            display: flex;
-            width: 40%;
-            justify-content: space-evenly;
-            align-items: center;
-            font-size: 20px;
-            font-weight: bolder;
-        }
-        
+      *{
+          margin: 0;
+          padding: 0%;
+      }
+      body, html{
+          height: 100%;
+          width: 100%;
+      }
+
+      #nav{
+          background-color: rosybrown;
+          display: flex;
+          justify-content: space-between;
+      }
+      #navL{
+          /* border: 1px solid red; */
+          width: 130px;
+      }
+      img{
+          width: 80%;
+          height: 100%;
+      }
+      #navR{
+          /* border: 1px solid red; */
+          display: flex;
+          width: 40%;
+          justify-content: space-evenly;
+          align-items: center;
+          font-size: 20px;
+          font-weight: bolder;
+      }
     </style>
   </head>
   <body>
     <div id="nav">
-        <div id="navL">
-            <img src="https://images.unsplash.com/photo-1496200186974-4293800e2c20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bG9nb3xlbnwwfHwwfHx8MA%3D%3D" alt="logo">
-        </div>
-        <div id='navR'>
-            <div id="prod">Product </div>
-            <div id="cart">Cart</div>
-            <div id="login">Login</div>
-        </div>
+      <div id="navL">
+        <img
+          src="https://images.unsplash.com/photo-1496200186974-4293800e2c20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bG9nb3xlbnwwfHwwfHx8MA%3D%3D"
+          alt="logo"
+        />
+      </div>
+      <div id="navR">
+        <div id="prod">Product</div>
+        <div id="cart">Cart</div>
+        <div id="login">Login</div>
+      </div>
     </div>
-    
+
     <div>
-        <h1>Hii I am a home page</h1>
+      <h1>Hii I am a home page</h1>
     </div>
   </body>
 </html>
 <script>
-    document.getElementById('prod').addEventListener('click', ()=>{
-        console.log('prod page');
-        window.location.href = `/Dom/product.html`
-        
-    })
-    document.getElementById('cart').addEventListener('click', ()=>{
-        console.log('cart page');
-        
-    })
-    document.getElementById('login').addEventListener('click', ()=>{
-        console.log('login page');
-        
-    })
-    
+  document.getElementById('prod').addEventListener('click', ()=>{
+      console.log('prod page');
+      window.location.href = `product.html`
+
+  })
+  document.getElementById('cart').addEventListener('click', ()=>{
+      console.log('cart page');
+      window.location.href = `cart.html`
+
+  })
+  document.getElementById('login').addEventListener('click', ()=>{
+      console.log('login page');
+      window.location.href = `login.html`
+
+  })
 </script>
