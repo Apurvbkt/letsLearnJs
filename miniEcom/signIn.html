@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>
-        I am signin
-    </h1>
-    
-    <input type="email" id="email" placeholder="email">
-    <input type="password" name="" id="pass" placeholder="password">
+  </head>
+  <body>
+    <h1>I am signin</h1>
+
+    <input type="email" id="email" placeholder="email" />
+    <input type="password" name="" id="pass" placeholder="password" />
     <button id="btn">signin</button>
-</body>
+    <h1 id="wlc"></h1>
+  </body>
 </html>
 <script>
-    document.getElementById('btn').addEventListener('click', singin)
-    
-    
-    function singin(){
-        let email  =document.getElementById('email').value;
-       let pass =  document.getElementById('pass').value;
-       
-    }
+  document.getElementById('btn').addEventListener('click', singin)
+  let data = JSON.parse(localStorage.getItem('userdata'))
+  // console.log(data);
+
+
+  function singin(){
+      let email  =document.getElementById('email').value;
+     let pass =  document.getElementById('pass').value;
+
+
+  let found = false; // Flag to track if correct credentials are found
+
+    data.map((e) => {
+        
+        if (e.email === email && e.pass === pass) {
+            // alert('data hai');
+            document.querySelector('#wlc').innerText = `Welcome ${e.user}`;
+            
+            found = true; // Set the flag to true if a match is found
+        }
+    });
+
+            // If no match is found, show the "wrong data" alert
+        if (!found) {
+            alert('wrong data');
+         }
+  }
 </script>
