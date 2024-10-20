@@ -12,7 +12,7 @@
     <input type="password" name="" id="pass" placeholder="write password">
     <!-- <input type="num"> -->
      <button id="btn">signup</button>
-     
+     <p>click here to go sign In page</p>
 </body>
 </html>
 <script>
@@ -42,6 +42,13 @@
         //add data into localStorage and converter it into string using json.stringify
         localStorage.setItem('userdata', JSON.stringify(data) )
         
+        // window.location.href = 'signIn.html'
+           
         
     })
+     document.querySelector("p").addEventListener('click', ()=>{
+                window.location.href = 'signIn.html'
+            })
 </script>
+
+
