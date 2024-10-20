@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Signup</h1>
+    <input type="email" placeholder="write your email" id="email">
+    <input type="text" id="name" placeholder="writr your name">
+    <input type="password" name="" id="pass" placeholder="write password">
+    <!-- <input type="num"> -->
+     <button id="btn">signup</button>
+     
+</body>
+</html>
+<script>
+    // took empty arr for storing the data
+    let data =  JSON.parse(localStorage.getItem('userdata')) || [];
+    // console.log(data.email)
+    
+    // select the tag and given their usecase
+     document.querySelector('#btn').addEventListener('click', ()=>{
+        let email = document.getElementById('email').value;
+        let user = document.getElementById('name').value;
+        let pass = document.getElementById('pass').value
+        // console.log(email, user, pass);
+        
+        
+        // created the object to convert string into object
+        let userCred = {
+            email : email,
+            user : user,
+            pass : pass
+        }
+        
+        //pushing converted(object) data into arr 
+        data.push(userCred)
+        console.log(data);
+        
+        //add data into localStorage and converter it into string using json.stringify
+        localStorage.setItem('userdata', JSON.stringify(data) )
+        
+        
+    })
+</script>
