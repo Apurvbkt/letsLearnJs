@@ -5,7 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background-color: rgb(124, 123, 123);">
     <h1>Admin page</h1>
+    <form id="form">
+        <input type="text" placeholder="name of the prod" id="prodName"/>
+        <input type="number"  placeholder="price of product" id="price" />
+        <select id="select">
+            <option value="tShirt">tShirt</option>
+            <option value="shoe">Shoe</option>
+            <option value="shirt">Shirt</option>
+        </select>
+        <input type="text" placeholder="img url" id="img">
+        <input type="submit">
+    </form>
 </body>
 </html>
+<script>
+    document.querySelector('#form').addEventListener('submit', data);
+    
+    let prodArr = []
+    
+    function data(e){
+        e.preventDefault()
+        let prodName = document.getElementById("prodName").value;
+        let price = document.getElementById('price').value;
+        let select = document.getElementById("select").value;
+        let img  = document.getElementById("img").value;
+        
+        
+        let prodObj ={
+            prodName : prodName,
+            price:price,
+            select:select,
+            img:img
+        }
+        prodArr.push(prodObj)
+        console.log(prodArr);
+        
+        
+       localStorage.setItem('productData', JSON.stringify(prodArr))
+        
+    }
+    
+    
+</script>
