@@ -35,7 +35,12 @@
 
     data.map((e) => {
 
-        if (e.email === email && e.pass === pass) {
+        if(email === 'admin@admin' && pass === 'admin'){
+            window.location.href = 'adim.html'
+            alert('welcome to admin')
+            found = true;
+            
+        } else if (e.email === email && e.pass === pass) {
             alert('log in sucsfl');
             document.querySelector('#wlc').innerText = `Welcome ${e.user}`;
 

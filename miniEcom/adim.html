@@ -18,6 +18,7 @@
         <input type="text" placeholder="img url" id="img">
         <input type="submit">
     </form>
+    <button id="btn">go to prod page</button>
 </body>
 </html>
 <script>
@@ -46,6 +47,10 @@
        localStorage.setItem('productData', JSON.stringify(prodArr))
         
     }
+    
+    document.getElementById('btn').addEventListener('click',()=>{
+        window.location.href = 'prod.html'
+    })
     
     
 </script>
