@@ -23,7 +23,7 @@
 <script>
     document.querySelector('#form').addEventListener('submit', data);
     
-    let prodArr = []
+    let prodArr =  JSON.parse(localStorage.getItem('productData')) || []
     
     function data(e){
         e.preventDefault()
