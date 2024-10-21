@@ -29,16 +29,19 @@
         
         
         // created the object to convert string into object
+        let userCred = {}
+        
         if(email == "" && pass == ""){
                 alert('please enter the credential')
         }
         else {
-        let userCred = {
+        userCred = {
             email : email,
             user : user,
             pass : pass
+            
+            }
         }
-    }
     
     
         //pushing converted(object) data into arr 
