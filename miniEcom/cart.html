@@ -1,13 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>
-        i am a cart page
-    </h1>
-</body>
+    <style>
+      .div{
+          border: 1px solid red;
+          display: flex;
+          gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+      <h1>i am a cart page</h1>
+      <h2></h2>
+    <div class="div"></div>
+  </body>
 </html>
+<script>
+    let cartData = JSON.parse(localStorage.getItem('cart'))
+    
+    let user = JSON.parse(localStorage.getItem('userdata'))
+
+    user.map((e)=>{
+    document.querySelector('h2').innerText = e.user
+    console.log(e)
+
+    })
+
+    cartData.map((e)=>{
+        console.log(e);
+        let div =  document.createElement('div');
+
+        let img = document.createElement('img')
+            img.setAttribute('src', e.img)
+        // console.log(img);
+        let p = document.createElement('p').innerText = e.price
+        // console.log(p);
+
+        let p2 = document.createElement('p').innerText = e.prodName
+        // console.log(p2)
+
+        div.append(img, p, p2)
+
+        document.querySelector('div').append(div)
+
+
+
+
+    })
+</script>

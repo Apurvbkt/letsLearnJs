@@ -12,19 +12,30 @@
   </head>
   <body>
     <h1>prod page</h1>
+    <h2></h2>
     <div id="main">
       <div id="foot"></div>
     </div>
+    <button id="cart">cart page</button>
   </body>
 </html>
 <script>
-  let prod = JSON.parse(localStorage.getItem('productData'))
+  let prod = JSON.parse(localStorage.getItem('productData'));
   // console.log(prod);
+  let cart = JSON.parse(localStorage.getItem('cart')) ||[];
+  
+  let user = JSON.parse(localStorage.getItem('userdata'))
+  
+  user.map((e)=>{
+    document.querySelector('h2').innerText = e.user
+    
+  })
 
   prod.map((e)=>{
+    let div = document.createElement('div')
       let pic = document.createElement('img')
       pic.setAttribute('src', e.img)
-      // console.log(pic);
+      console.log(pic);
       let h = document.createElement('h3')
       h.textContent = e.prodName
       // console.log(h1);
@@ -36,7 +47,25 @@
       let price = document.createElement('p')
       price.innerText = e.price
 
-      document.getElementById('main').append(pic, h, catg, price)
+      let btn = document.createElement('button')
+      btn.textContent = 'add to cart'
+      btn.addEventListener('click', ()=>{
+        // console.log(e);
+        cart.push(e)
+        console.log(cart);
+
+         localStorage.setItem('cart', JSON.stringify(cart))
+
+
+      })
+      
+        
+      div.append(pic, h, catg, price, btn)
+      document.getElementById('main').append(div)
       // document.getElementById('foot').append()
+  })
+  
+  document.getElementById('cart').addEventListener('click', ()=>{
+    window.location.href = 'cart.html'
   })
 </script>
