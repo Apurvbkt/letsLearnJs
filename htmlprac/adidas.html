@@ -20,7 +20,7 @@
               background-color: black;
               height: 40px;
               width: 100%;
-                border: 1px solid red;
+                /* border: 1px solid red; */
               color: white;
               text-align: center;
               display: flex;
@@ -135,6 +135,8 @@
                 justify-content: space-between;
                 /* align-items: center;; */
                 margin-bottom: 30px;
+                border: 1px solid red;
+                /* overflow:scroll; */
             }
             .cont{
 
@@ -215,42 +217,63 @@
               display: none;
             }
             @media(max-width:600px){
+              body{
+                border: 1px solid royalblue;
+              }
+              .smlnav{
+                border: 1px solid red;
+                width: 100%;
+              }
               .miniNav{
                 display: none;
               }  
               .mainNav{
-                flex-direction: column;
+                /* flex-direction: column; */
                 border: 1px solid red;
                 
               }
               .ulSec{
                 display: none;
-                
               }
-              .setinput input{
+              input{
                 display: none;
               }
               .ritSide{
-                border: 1px solid red;
-                width: 30%;
-                position: absolute;
-                right: 10px;
-                margin-top: 20px;
+                display: flex;
+                justify-content:space-around;
+                gap: 10px;
+                
               }
-              .hrt{
+              .intxt{
                 display: none;
-                /* position: absolute;
-                left: 10px; */
               }
-              .hrt2{
-                /* border: 1px solid red;
-                margin-bottom: 20px;
-                position: absolute;
-                left: 10px; */
-                /* margin-top: 22px; */
-                display:block;
+              .btnmain{
+                border: 1px solid rgb(0, 0, 0);
+                /* display: block; */
+                width: 100vw;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                /* overflow: hidden; */
+                /* overflow: hidden; */
+                overflow: hidden;
+                margin-top: 10px;
+                /* justify-content: center; */
               }
-              
+              .inbtn {
+                border: 1px solid red;
+                display: flex;
+                /* flex-wrap: wrap; */
+                /* align-items: center; */
+              }
+              button{
+                margin-bottom: 10px;
+              }
+              .pic{
+                display: none;
+                
+                /* justify-content: center; */
+              }
             }
     </style>
 
@@ -290,14 +313,7 @@
       <!-- nav3 -->
       <div class="mainNav">
         <div class="imgDiv"><img src="/htmlprac/public/logo.png" alt="" /></div>
-        <div class="mainin">
-          
-          <div class="hrt2">
-            <i class="fa-solid fa-bars"></i>
-            <i class="fa-regular fa-heart"></i>
-          </div>
-          
-        </div>
+       
         <div class="ulSec">
           <ul>
             <li>MEN</li>
@@ -313,7 +329,14 @@
           
         </div>
         
-        
+        <!-- <div class="mainin">
+          
+          <div class="hrt2">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          
+        </div> -->
         
         <!--  -->
         <div class="ritSide">
@@ -344,6 +367,7 @@
           <div class="txt">
             <h1>Enjoy Exclusive Deals on Your Must-Have Categories!</h1>
           </div>
+          
           <div class="btnmain">
             <div class="inbtn">
               <button>ORIGINALS</button>
