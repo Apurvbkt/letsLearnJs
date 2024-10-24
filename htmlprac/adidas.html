@@ -19,7 +19,7 @@
           .smlnav{
               background-color: black;
               height: 40px;
-              
+              width: 100%;
                 border: 1px solid red;
               color: white;
               text-align: center;
@@ -57,7 +57,7 @@
         .mainNav{
               /* border: 1px solid blue; */
                 height: 48px;
-                background-color: #000;
+                /* background-color: #000; */
                 width: 95%;
                 margin: auto;
                 display: flex;
@@ -211,8 +211,23 @@
             color: red; text-decoration: none;
            } */
             @media(max-width:600px){
-              
-              
+                
+              html, body{
+              height: 100%;
+              width: 402vw;
+              /* border: 2px solid red; */
+            background-color: rgb(138, 138, 138);
+          }
+                 .smlnav{
+                  /* background-color: white; */
+                  width: 100%;
+                   font-size: 60px;
+                   height: 150px;
+                }      
+                .smlnav p{
+                   font-size: 60px;
+                  
+                 }   
             }
     </style>
 
