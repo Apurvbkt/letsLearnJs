@@ -1,0 +1,130 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: relative;
+    color: white;
+}
+nav{
+    /* border: 2px solid rgb(255, 255, 255); */
+    
+    background-color: rgba(179, 160, 52, 0.721);
+    height: 80px;
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+}
+.nav-rt{
+    /* border: 2px solid red; */
+    display: flex;
+    gap: 3vw;
+    /* margin-right: 20px; */
+    
+}
+h2{
+    /* margin-left: 20px; */
+}
+h4{
+    text-transform:uppercase;
+    font-size: 15px;
+}
+.nav-rt i{
+    display: none;
+}
+.content{
+    width: 100%;
+    display: flex;
+    height: calc(100% - 80px);
+    /* background-color: rgb(48, 89, 100);  */
+    
+}
+.lft{
+    /* border: 2px solid red; */
+    /* background-color: rebeccapurple; */
+    width: 50%;
+    height: 100%;
+    
+}
+.txt{
+    padding: 100px 120px;
+    
+}
+.txt h1{
+    font-size: 4vw;
+    line-height: 4.4vw;
+}
+.txt p{
+    line-height: 2vw;
+}
+.rit{
+    height: 100%;
+    width: 50%;
+    /* background-color: brown; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.rit img{
+    height: 80vh;
+    width: 40vw;
+}
+
+@media (max-width:600px) {
+    nav{
+        background-color: rgb(72, 92, 85);
+    }
+    h4{
+        display: none;
+    }
+    .nav-rt i{
+        display: inline;
+        font-size: 25px;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    .lft{
+        /* border: 2px solid white; */
+        height: 40%;
+        width: 100%;
+    }
+    .txt{
+        /* border: 2px solid white; */
+        padding: 3vh 5vw;
+    }
+    .txt h1{
+        line-height: 80%;
+        font-size: 10vw;
+    }
+    .txt p{
+        padding: 1vh 1vh;
+        line-height: 20px;
+    }
+    button{
+        margin-left: 10px;
+    }
+    .rit{
+        
+        /* border: 2px solid rgb(255, 0, 0); */
+        width: 100%;
+        height: 50%;
+    }
+    .rit img{
+        width: 100%;
+        height: auto;
+        padding-top: 0%;
+        /* background-color: aqua; */
+        
+    }
+}
