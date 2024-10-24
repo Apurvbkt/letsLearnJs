@@ -14,7 +14,7 @@
            html, body{
               height: 100%;
               width: 100%;
-            background-color: rgb(138, 138, 138);
+            /* background-color: rgb(138, 138, 138); */
           }
           .smlnav{
               background-color: black;
@@ -61,6 +61,7 @@
                 width: 95%;
                 margin: auto;
                 display: flex;
+                /* flex-wrap: wrap; */
                 justify-content: space-between;
                 align-items: center;
                 /* border-bottom: 1px solid; */
@@ -210,24 +211,46 @@
            .redtext{
             color: red; text-decoration: none;
            } */
+            .hrt2{
+              display: none;
+            }
             @media(max-width:600px){
+              .miniNav{
+                display: none;
+              }  
+              .mainNav{
+                flex-direction: column;
+                border: 1px solid red;
                 
-              html, body{
-              height: 100%;
-              width: 402vw;
-              /* border: 2px solid red; */
-            background-color: rgb(138, 138, 138);
-          }
-                 .smlnav{
-                  /* background-color: white; */
-                  width: 100%;
-                   font-size: 60px;
-                   height: 150px;
-                }      
-                .smlnav p{
-                   font-size: 60px;
-                  
-                 }   
+              }
+              .ulSec{
+                display: none;
+                
+              }
+              .setinput input{
+                display: none;
+              }
+              .ritSide{
+                border: 1px solid red;
+                width: 30%;
+                position: absolute;
+                right: 10px;
+                margin-top: 20px;
+              }
+              .hrt{
+                display: none;
+                /* position: absolute;
+                left: 10px; */
+              }
+              .hrt2{
+                /* border: 1px solid red;
+                margin-bottom: 20px;
+                position: absolute;
+                left: 10px; */
+                /* margin-top: 22px; */
+                display:block;
+              }
+              
             }
     </style>
 
@@ -267,6 +290,14 @@
       <!-- nav3 -->
       <div class="mainNav">
         <div class="imgDiv"><img src="/htmlprac/public/logo.png" alt="" /></div>
+        <div class="mainin">
+          
+          <div class="hrt2">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          
+        </div>
         <div class="ulSec">
           <ul>
             <li>MEN</li>
@@ -279,8 +310,11 @@
               FESTIVAL SALE - EXTRA 20% OFF
             </li>
           </ul>
+          
         </div>
-
+        
+        
+        
         <!--  -->
         <div class="ritSide">
           <div class="test">
@@ -289,16 +323,12 @@
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
           </div>
-          <!-- <div>
-            <a href="
-            ">
-                
-            </a>
-           </div>  -->
+          
+         
           <div>
             <i class="fa-regular fa-user"></i>
           </div>
-          <div>
+          <div class="hrt">
             <i class="fa-regular fa-heart"></i>
           </div>
           <div>
