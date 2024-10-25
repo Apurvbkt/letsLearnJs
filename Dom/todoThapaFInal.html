@@ -1,11 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <h1>todo</h1>
+    <form action="">
+      <div>
+        <input type="text" name="" id="classValue" />
+        <button>add items</button>
+      </div>
+      <div class="todoLists"></div>
+    </form>
+  </body>
 </html>
+<script>
+  let classValue = document.querySelector('#classValue')
+  let todoLists = document.querySelector('.todoLists')
+  let todoValue = []
+  todoLists.addEventListener('click', e=>{remove(e)})
+
+  // getting data from local storage
+   let getData = ()=>{
+      return JSON.parse(localStorage.getItem('todoData')) || []
+   }
+
+  // add to local storage
+  let addDataInLocal = (value)=>{
+      return localStorage.setItem('todoData', JSON.stringify(value))
+  }
+
+
+  const previousData = ()=>{
+      todoValue = getData()
+      console.log(todoValue);
+      
+      todoValue.forEach(e => {
+
+          let li = document.createElement('li');
+              li.innerHTML = e;
+              todoLists.appendChild(li)
+      });
+
+  }
+
+  // data remove
+      const remove = (e)=>{
+    //   console.log(e.target.textContent);
+        // console.log(todoValue);
+        console.log(updateTodo);
+        addDataInLocal(updateTodo)
+        // todoLists.innerHTML = '';
+        let crntTodo = e.target
+        updateTodo = todoValue.filter((ele=> ele !== crntTodo))
+        
+    }
+
+  btn = document.querySelector('button').addEventListener('click',(e)=>{
+      e.preventDefault()
+
+      todoValue = getData()
+      let newTodo = classValue.value.trim()
+      console.log(newTodo);
+
+      classValue.value = "";
+
+      if(newTodo.length !== 0 && !todoValue.includes(newTodo)){
+
+
+          todoValue.push(newTodo)
+          addDataInLocal(todoValue)
+          // console.log('clicked');
+          let li = document.createElement('li');
+          li.innerHTML = newTodo;
+          todoLists.appendChild(li)
+          // console.log(li);
+      }
+
+
+  })
+
+  previousData()
+</script>
