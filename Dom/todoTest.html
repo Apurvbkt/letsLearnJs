@@ -6,6 +6,43 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <input type="text" placeholder="write list">
+    <button class="btn">click me</button>
+    <ul>
+        
+    </ul>
 </body>
 </html>
+
+<script>
+    document.querySelector('.btn').addEventListener('click', btnClick)
+    let input = document.querySelector('input')
+    let ul = document.querySelector('ul')
+    let data = []
+    
+    function btnClick(){
+        // let list =  document.querySelector('ul').innerText = input;
+        if(input.value === ""){
+            alert('please add data')
+        }
+        else{         
+            li = document.createElement('li');
+            btn = document.createElement('button')
+            li.innerHTML  = input.value;
+            btn.innerText = 'remove'
+            li.appendChild(btn)
+            ul.appendChild(li) 
+        }
+        
+        
+        input.value = "";
+        btn.addEventListener('click', (e)=>{
+          console.log(li.innerHTML);
+          
+            
+        })
+            
+        
+    }
+    
+</script>
