@@ -35,12 +35,14 @@
           li.innerHTML  = `${input.value} <i class="fa-solid fa-trash"></i>`;
           ul.appendChild(li)
           li.querySelector('i').addEventListener('click',()=>{
-                
+             li.remove()    
+             
             
           })
+          
+          
+        }
         
-
-      }
 
 
       
