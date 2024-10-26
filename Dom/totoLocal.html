@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <form action="">
-    <label for="">name</label>
-    <input type="text" placeholder="name" id="name">
-    <label for="">Quantity</label>
-    <input type="number" placeholder="Quantity" id="qnt">
-    <input type="submit" class="submit">
-  </form>
-  <table border="1">
-    <thead >
-    <tr>
-      <th>name</th>
-      <th>Quantity</th>
-      <th>delete</th>
-    </tr>
-  </thead>
-  <tbody>
-    
-  </tbody>
-  </table>
-</body>
-</html> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="">name</label>
+      <input type="text" placeholder="name" id="name" />
+      <label for="">Quantity</label>
+      <input type="number" placeholder="Quantity" id="qnt" />
+      <input type="submit" class="submit" />
+    </form>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>Quantity</th>
+          <th>delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </body>
+</html>
 <script>
   document.querySelector('.submit').addEventListener('click', addData)
-  let dataArr = JSON.parse(localStorage.getItem('todoDat')) || []
+  let dataArr = JSON.parse(localStorage.getItem('todoData')) || []
+    displyData(dataArr)
+  
+  
   
   function addData(event){
     event.preventDefault()
@@ -40,14 +41,44 @@
         qnt
     }
     dataArr.push(obj)
-    
+
     localStorage.setItem('todoData', JSON.stringify(dataArr))
+
     
-    
-    
+    displyData(dataArr)
   }
   
+  
+  
+  function displyData(dataArr){
+    document.querySelector('tbody').innerHTML = '';
+    dataArr.map((e) => {
+         console.log(e);
+            
+         document.querySelector('#name').value = '' 
+         
+         let row = document.createElement('tr')
 
+         let td1 = document.createElement('td')
+         td1.innerText = e.name;
+
+         let td2 = document.createElement('td')
+         td2.innerText = e.qnt;
+
+         let dlt = document.createElement('td')
+         dlt.innerText = 'delete'
+         dlt.addEventListener('click', function( ){
+            remove(e)
+         })
+         
+         row.append(td1, td2, dlt)
+      
+        document.querySelector('tbody').append(row)
+
+    });
+  }
   
-  
+  function remove(e){
+    e.target.parentNode.remove()
+  }
 </script>
