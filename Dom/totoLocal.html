@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
@@ -39,53 +29,25 @@
 </html> 
 <script>
   document.querySelector('.submit').addEventListener('click', addData)
-  
+  let dataArr = JSON.parse(localStorage.getItem('todoDat')) || []
   
   function addData(event){
     event.preventDefault()
     let name = document.querySelector('#name').value;
     let qnt = document.querySelector('#qnt').value;
-    let data = name.value;
-    // console.log(name, qnt, 'clicked');
-    
-    // data = '';
-    if(name === '' || qnt === ''){
-      alert('please fill the data')
-    }else{
-      
-      document.getElementById("name").value = "";
-      document.getElementById("qnt").value = "";
-      
-      let row = document.createElement('tr')
-      
-      let td1 = document.createElement('td')
-      td1.innerText = name;
-      
-      let td2 = document.createElement('td')
-      td2.innerText = qnt;
-      
-      let dlt = document.createElement('td')
-      dlt.innerText = 'delet'
-      dlt.addEventListener('click', remove)
-      
-      
-      
-      row.append(td1, td2, dlt)
-      
-      document.querySelector('tbody').append(row)
-      
-      
+    obj = {
+        name,
+        qnt
     }
+    dataArr.push(obj)
+    
+    localStorage.setItem('todoData', JSON.stringify(dataArr))
     
     
     
   }
   
-  function remove(e){
-    // console.log(e.target.parentNode);
-    e.target.parentNode.remove()
-    
-  }
+
   
   
 </script>
