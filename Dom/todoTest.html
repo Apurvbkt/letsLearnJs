@@ -6,6 +6,62 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <form action="">
+    <label for="">name</label>
+    <input type="text" placeholder="name" id="name">
+    <label for="">Quantity</label>
+    <input type="number" placeholder="Quantity" id="qnt">
+    <input type="submit" class="submit">
+  </form>
+  <table border="1">
+    <thead >
+    <tr>
+      <th>name</th>
+      <th>Quantity</th>
+      <th>delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+  </tbody>
+  </table>
 </body>
-</html>
+</html> 
+<script>
+  document.querySelector('.submit').addEventListener('click', addData)
+  
+  
+  function addData(event){
+    event.preventDefault()
+    let name = document.querySelector('#name').value;
+    let qnt = document.querySelector('#qnt').value;
+    // console.log(name, qnt, 'clicked');
+    
+    let row = document.createElement('tr')
+    
+    let td1 = document.createElement('td')
+    td1.innerText = name;
+    
+    let td2 = document.createElement('td')
+    td2.innerText = qnt;
+    
+    let dlt = document.createElement('td')
+    dlt.innerText = 'delet'
+    dlt.addEventListener('click', remove)
+    
+    
+    
+    row.append(td1, td2, dlt)
+    
+    document.querySelector('tbody').append(row)
+    
+  }
+  
+  function remove(e){
+    // console.log(e.target.parentNode);
+    e.target.parentNode.remove()
+    
+  }
+  
+  
+</script>
