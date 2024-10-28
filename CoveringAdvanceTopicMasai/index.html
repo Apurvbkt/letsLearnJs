@@ -1,24 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Promise  -->
-     
-    
-    
-</body>
+  </body>
 </html>
 <script>
-   let myPromise = new Promise(function(resolve, reject){
-    
-    
-    
-   })
-   console.log(myPromise);
-   
-    
+  //    let myPromise = new Promise(function(resolve, reject){
+
+  //     reject('i am reject')
+
+  //    })
+  // //    console.log(myPromise);
+
+
+  //    //success value
+  //    myPromise.then(function(response){
+  //     console.log(response)
+  //    })
+
+
+  //    //fail  value
+  //    myPromise.catch(function(err){
+  //     console.log(err);
+
+  //    })
+
+  let passInExam = true
+  let parentPromise = new Promise(function(resolve, reject){
+
+
+      setTimeout(function(){
+
+          if(passInExam){
+          resolve('pass in exam')
+          }else{
+          reject('fail in exam')
+      }
+
+      },3000)
+
+  })
+
+  parentPromise.then(function(res){
+      console.log('pass in exam', res);
+
+  })
+  parentPromise.catch(function(rej){
+      console.log('Re-Exam,', rej);
+
+  })
 </script>
