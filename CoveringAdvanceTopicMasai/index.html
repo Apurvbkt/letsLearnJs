@@ -7,9 +7,54 @@
   </head>
   <body>
     <!-- Promise  -->
+     
+    name: <input type="text" id="name">
+    <button class="btn">register</button>
   </body>
 </html>
 <script>
+    
+    
+    let name = ['apurv', 'papay', 'dev', 'abhi']
+    document.querySelector('.btn').addEventListener('click',()=>{
+        let input = document.querySelector('#name').value;
+        name.push(input)
+        // console.log(input);
+         
+        let mesg = `${name}  your reg is succesfull `
+        alert(mesg)
+        
+        let myPromise = new Promise(function(resolve, reject){
+            
+            setTimeout(function(){
+                
+                if(name[0] === input){
+                    resolve(`${name} is your turn now`)
+                }
+                else{
+                    reject()
+                }
+                
+            },5000)
+        })
+        
+        myPromise.then(function(sol){
+            console.log(res);
+            
+            
+        })
+        
+        
+    })
+    
+
+    
+    
+    
+    
+    
+    
+    
   //    let myPromise = new Promise(function(resolve, reject){
 
   //     reject('i am reject')
@@ -30,28 +75,32 @@
 
   //    })
 
-  let passInExam = true
-  let parentPromise = new Promise(function(resolve, reject){
+//   let passInExam = true
+//   let parentPromise = new Promise(function(resolve, reject){
 
 
-      setTimeout(function(){
+//       setTimeout(function(){
 
-          if(passInExam){
-          resolve('pass in exam')
-          }else{
-          reject('fail in exam')
-      }
+//           if(passInExam){
+//           resolve('pass in exam')
+//           }else{
+//           reject('fail in exam')
+//       }
 
-      },3000)
+//       },3000)
 
-  })
+//   })
 
-  parentPromise.then(function(res){
-      console.log('pass in exam', res);
+//   parentPromise.then(function(res){
+//       console.log('pass in exam', res);
 
-  })
-  parentPromise.catch(function(rej){
-      console.log('Re-Exam,', rej);
+//   })
+//   parentPromise.catch(function(rej){
+//       console.log('Re-Exam,', rej);
 
-  })
+//   })
+
+
+
+
 </script>
