@@ -3,9 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Document</title>.
+    <style>
+        #data{
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+        }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div id="data">
+        
+    </div>
+  </body>
 </html>
 <script>
     let url  = 'https://reqres.in/api/users'
@@ -44,8 +55,9 @@
           try {
               let res = await fetch(url)
               let data = await res.json()
-
-              console.log(data.data);
+              let ans = data.data;
+              console.log(ans);
+              showData(ans)
 
           } catch (error) {
               console.log("this err is coming from catch", error);
@@ -55,4 +67,32 @@
         }
 
         getData()
+        
+        function showData(e){
+            e.forEach( (res)=>{
+                
+                // console.log(res.email);
+                
+                let div = document.createElement('div')
+                
+                let img = document.createElement('img')
+                img.src = res.avatar;
+                
+                let p = document.createElement('p')
+                p.innerHTML = res.first_name;
+                
+                let p2 = document.createElement('p')
+                p2.innerHTML = res.email;
+                
+                let btn = document.createElement('button')
+                btn.innerText = 'show info'
+
+                
+                div.append(img, p, p2, btn)
+                
+                document.querySelector('#data').append(div)
+                
+            })
+        }
+        
 </script>
