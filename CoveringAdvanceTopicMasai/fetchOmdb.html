@@ -4,27 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+        .cnt{
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+    </style>
   </head>
   <body>
     <input type="text" name="" id="input" />
     <button id="btn">click to show</button>
+    <div class="cnt">
+        
+    </div>
   </body>
 </html>
 <script> 
      document.querySelector('#btn').addEventListener('click', displayData)
+     let main = document.querySelector('.cnt')
      
 
   async function displayData(){
     let input = document.querySelector('#input').value
      console.log(input)      
-    let url=   `https://www.omdbapi.com/?t=${input}&apikey=20239ed9`
+    let url=   `https://www.omdbapi.com/?s=${input}&apikey=20239ed9`
 
 
      try {
 
          let res  = await fetch(url)
          let data = await res.json()
-         console.log(data);
+         let finalData = data.Search
+        //  console.log(finalData);
+         array(finalData)
 
 
      } catch (error) {
@@ -32,6 +45,35 @@
         
      }
   }
+  
+  
 
 //   displayData()
+
+// Title  Year  Country Poster
+
+function array(e){
+   
+   
+    e.forEach((e)=>{
+        console.log(e.Title);
+        let div = document.createElement('div')
+        
+        let img = document.createElement('img')
+        img.src = e.Poster
+        
+        let h2 = document.createElement('h2')
+        h2.innerHTML = e.Title
+        
+        let p = document.createElement('p')
+        p.innerHTML = e.Year
+        
+        div.append(img, h2, p)
+        main.append(div)
+        
+    })
+}
+
+
+
 </script>
