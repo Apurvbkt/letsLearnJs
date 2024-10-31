@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>
+<script>
+  //https://api.openweathermap.org/data/2.5/forecast?q=pune&appid=2fbda5d5c943454fde5858fe70172b96#&units=matric
+
+
+  async function days(){
+      try {
+
+          let res = await fetch('https://api.openweathermap.org/data/2.5/forecast?q=pune&appid=2fbda5d5c943454fde5858fe70172b96#&units=matric')
+          
+          let data = await res.json()
+          
+          const uniq = [];
+          
+          const fivedaya = data.list.filter(frcst =>{
+              const forcastdata = new Date(frcst.dt_txt).getDate()
+              if(!uniq.includes(forcastdata)){
+                  return uniq.push(forcastdata)
+                }   
+            })
+            console.log(fivedaya);
+          
+
+      } catch (error) {
+          console.log(error);
+
+      }
+  }
+  
+  async function days7() {
+    
+    
+  }
+  days7()
+  days()
+</script>
