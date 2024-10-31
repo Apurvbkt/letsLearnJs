@@ -4,20 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            gap: 20px;
+        }
+        .main div{
+            border: 1px solid red;
+            padding: 10px;
+        }
+        
+        
+    </style>
   </head>
-  <body></body>
+  <body>
+    
+    City Name: <input type="text" id="input">
+    <button class="btn">Click to search</button>
+    <div id="name"></div>
+    
+    <div class="main">
+        
+    </div>
+    
+  </body>
 </html>
 <script>
   //https://api.openweathermap.org/data/2.5/forecast?q=pune&appid=2fbda5d5c943454fde5858fe70172b96#&units=matric
-
-
+  document.querySelector('.btn').addEventListener('click', days)
+  
   async function days(){
+      let input = document.querySelector('#input').value;
       try {
 
-          let res = await fetch('https://api.openweathermap.org/data/2.5/forecast?q=pune&appid=2fbda5d5c943454fde5858fe70172b96#&units=matric')
+          let res = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${input}&appid=2fbda5d5c943454fde5858fe70172b96#&units=matric`)
           
           let data = await res.json()
           
+        //   console.log(data);
+            let a = data.city
+            // console.log(a.name);
+            name(a)
+            
           const uniq = [];
           
           const fivedaya = data.list.filter(frcst =>{
@@ -26,8 +54,8 @@
                   return uniq.push(forcastdata)
                 }   
             })
-            console.log(fivedaya);
-          
+            // console.log(fivedaya);
+          arr(fivedaya)
 
       } catch (error) {
           console.log(error);
@@ -40,5 +68,46 @@
     
 //   }
 //   days7()
-  days()
+
+  
+  function name(apu){
+    
+        let h = document.createElement('h2')
+        h.innerHTML = apu.name
+        document.querySelector('#name').append(h)
+        // console.log(h);
+        
+        
+  }
+ 
+    function arr(d){
+        d.forEach(e =>{
+            let div = document.createElement('div')
+            
+            let p = document.createElement('p')
+            p.innerHTML = `Date: ${e.dt_txt.split(" ")[0]}`            
+            //  console.log(p);
+             
+            let p2 = document.createElement('p')
+            p2.innerHTML = `temp: ${(e.main.temp - 273.15).toFixed(2)}*C`
+            // console.log(p2);
+            
+        
+            
+             
+            
+            
+            div.append(p, p2)
+            
+            document.querySelector('.main').append(div)
+        })
+    }
+
+
+
+
+
+
+
+//   days()
 </script>
